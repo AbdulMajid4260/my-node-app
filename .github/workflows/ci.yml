@@ -4,7 +4,7 @@ on:
     push:
         branches: [main]
     pull_request:
-        branches:[main]
+        branches: [main]
 
 jobs:
     build:
@@ -17,7 +17,7 @@ jobs:
 
         steps:
         - uses: actions/checkout@v2
-        - name: use Node.js ${{matrix.node-verson}}  
+        - name: use Node.js ${{ matrix.node-version }}  
           uses: actions/setup-node@v2
           with:
             node-version: ${{ matrix.node-version }}  
